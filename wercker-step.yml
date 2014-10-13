@@ -1,5 +1,5 @@
 name: git-commit-messages
-version: 0.3.0
+version: 0.4.0
 description: Adds WERCKER_GIT_DIFF_MESSAGES variable containing commit messages since last run
 keywords:
   - git
