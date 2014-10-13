@@ -8,3 +8,5 @@ if  test -d "$LAST_COMMIT_HASH_FILE"; then
 else
     WERCKER_GIT_DIFF_MESSAGES="First Run: No last commit hash to log against."  
 fi
+
+echo $WERCKER_GIT_COMMIT > LAST_DEPLOYMENT_COMMIT_HASH_FILE
