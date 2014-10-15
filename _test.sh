@@ -13,14 +13,14 @@ mkdir cache/
 git init
 
 
-# it should show inital commit message and create a cahe file 
+# it should show inital commit message and create a cahe file
 
 touch f1le1
 git add --all
 git commit -m 'First commit'
 
 if [ -n "$LOCAL" ]; then
-	WERCKER_GIT_COMMIT=`git rev-parse HEAD` WERCKER_CACHE_DIR=cache WERCKER_GIT_BRANCH=master ../run.sh 
+	WERCKER_GIT_COMMIT=`git rev-parse HEAD` WERCKER_CACHE_DIR=cache WERCKER_GIT_BRANCH=master ../run.sh
 	echo $WERCKER_GIT_DIFF_MESSAGES
 fi
 
@@ -36,6 +36,6 @@ git add --all
 git commit -m 'Third commit'
 
 if [ -n "$LOCAL" ]; then
-	WERCKER_CACHE_DIR=cache WERCKER_GIT_BRANCH=master ../run.sh 
+	WERCKER_CACHE_DIR=cache WERCKER_GIT_BRANCH=master WERCKER_GIT_COMMIT_MESSAGES_DEBUG ../run.sh
 	echo $WERCKER_GIT_DIFF_MESSAGES
 fi
